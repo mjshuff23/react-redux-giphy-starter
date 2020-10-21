@@ -2,11 +2,12 @@ import React from 'react';
 import GifsList from './GifsList';
 import SearchBar from './SearchBar';
 
-const App = () => {
+const App = ({ fetchGifs, gifUrls }) => {
+  console.log(gifUrls);
   return (
     <>
-      <SearchBar />
-      <GifsList />
+      <SearchBar fetchGifs={fetchGifs} />
+      <GifsList gifUrls={gifUrls}/>
     </>
   );
 };
